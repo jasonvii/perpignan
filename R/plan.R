@@ -7,6 +7,7 @@ plan <- drake::drake_plan(
     folder =  dir.create('output'),
     
     figure1 = makeFigure1(data_1982, output_filename = 'output/figure1.pdf', main = '1982'),
-    figure2 = makeFigure1(data, output_filename = 'output/figure2.pdf', main = 'whole time series')
-
+    figure2 = makeFigure1(data, output_filename = 'output/figure2.pdf', main = 'whole time series'),
+    report =  rmarkdown::render
+    
 )
